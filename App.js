@@ -23,7 +23,6 @@ export default class App extends React.Component {
       // Get forecast weather for five days
       const forcastDays = await jsonData["consolidated_weather"]
       this.setState({ weatherResults: forcastDays })
-      // console.log(this.state.weatherResults)
     } catch {
       Alert.alert('Make sure to type a proper city name!')
     }
