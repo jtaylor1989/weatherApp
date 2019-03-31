@@ -23,6 +23,7 @@ export default class App extends React.Component {
       const jsonData = await cityWeather.json()
       // Extract the forecast for the next five days
       const forcastDays = await jsonData["consolidated_weather"]
+      // Dismiss Keyboard when submitting search result
       Keyboard.dismiss()
       this.setState({ weatherResults: forcastDays })
     } catch {
