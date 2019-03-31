@@ -1,5 +1,5 @@
 import React from 'react'
-import { Alert, View } from 'react-native'
+import { Alert, View, Keyboard } from 'react-native'
 
 // Local imports
 import SearchBar from './src/components/SearchBar'
@@ -23,6 +23,7 @@ export default class App extends React.Component {
       const jsonData = await cityWeather.json()
       // Extract the forecast for the next five days
       const forcastDays = await jsonData["consolidated_weather"]
+      Keyboard.dismiss()
       this.setState({ weatherResults: forcastDays })
     } catch {
       Alert.alert('Make sure to type a proper city name!')

@@ -17,6 +17,7 @@ const SearchBar = (props) => (
       <Ionicons name="ios-search" style={styles.iconStyle} />
       <Input
         placeholder="Enter city name"
+        returnKeyType='done'
         onChangeText={props.city} />
       <Ionicons name="md-rainy" style={styles.iconStyle} />
     </Item>
