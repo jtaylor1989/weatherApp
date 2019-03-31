@@ -1,6 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { StyleSheet } from 'react-native'
+
+// Native base imports
 import { Container, Header, Item, Input, Button, Text } from 'native-base'
+
+// Expo Icons
 import { Ionicons } from '@expo/vector-icons'
 
 
@@ -24,14 +28,14 @@ const SearchBar = (props) => (
     </Button>
   </Container>
 )
+
 export default SearchBar
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0.5,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff'
   },
   headerStyle: {
     backgroundColor: '#fff',

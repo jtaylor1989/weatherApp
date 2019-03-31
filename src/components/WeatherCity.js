@@ -59,7 +59,7 @@ const WeatherCity = (props) => (
 export default WeatherCity
 
 // Get the width of the device
-let width = Dimensions.get('window').width;
+let width = Dimensions.get('window').width
 
 const styles = StyleSheet.create({
   container: {
