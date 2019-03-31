@@ -1,11 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+// Components import
+import SearchBar from './src/components/SearchBar'
+
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Weather App</Text>
+      <View style={{ flex: 1 }}>
+        <SearchBar />
+        <View style={styles.container}>
+          <Text>Weather Data for your city</Text>
+        </View>
       </View>
     );
   }
@@ -14,8 +20,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
