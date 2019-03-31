@@ -8,14 +8,19 @@ class SearchBar extends Component {
     return (
       <Container style={styles.container}>
         <Header style={styles.headerStyle} >
-          <Text style={{ fontSize: 28 }}>Weather</Text>
+          <Text style={{ fontSize: 28 }}>Weather Forcast</Text>
         </Header>
         <Item full style={{ marginBottom: 15 }}>
           <Ionicons name="ios-search" style={styles.iconStyle} />
-          <Input placeholder="Enter city name" />
+          <Input
+            placeholder="Enter city name"
+            onChangeText={this.props.city} />
           <Ionicons name="md-rainy" style={styles.iconStyle} />
         </Item>
-        <Button full primary>
+        <Button
+          full
+          primary
+          onPress={this.props.showCityWeather}>
           <Text>Search</Text>
         </Button>
       </Container>
