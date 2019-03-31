@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Alert, View, Text } from 'react-native'
+import { StyleSheet, Alert, View } from 'react-native'
 
-// Components import
+// Local imports
 import SearchBar from './src/components/SearchBar'
 import WeatherCity from './src/components/WeatherCity'
 
 export default class App extends React.Component {
-  // Load initial state of the App
+  // Load the initial state of the App
   state = {
     city: undefined,
     cityLocation: undefined,

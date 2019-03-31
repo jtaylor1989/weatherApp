@@ -7,15 +7,14 @@ import {
   Dimensions
 } from "react-native"
 
+// Third party libraries
 import { Card } from 'native-base'
 import moment from 'moment'
 
-
-// // Takes a given date and ouptu the coresponding day
-// const getDayOfMonth = (date) => {
-//   newDate = date.split('-').reverse().join('-')
-//   return (moment(newDate).format('dddd'))
-// }
+// Takes a given date and outputs the corresponding day
+const getDayOfMonth = (date) => {
+  return (moment(date).format('dddd'))
+}
 
 const WeatherCity = (props) => (
   <View style={{ flex: 1 }}>
@@ -24,7 +23,7 @@ const WeatherCity = (props) => (
         props.forecastCity.map((day, index) => (
           <Card key={index} style={styles.cardStyle}>
             <Text style={styles.textStyle}>
-              Date: {day.applicable_date}
+              Date: {getDayOfMonth(day.applicable_date)}
             </Text>
             <Text style={styles.textStyle}>
               Forecast: {day.weather_state_name}
@@ -78,14 +77,3 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
 })
-
-// Data to show 
-// "applicable_date": [], // Date
-// "the_temp": [], // Current temp: C
-// "max_temp": [],
-// "min_temp": [], // Round
-// "weather_state_name": "", // Show Icon if possible
-// "wind_speed": [],
-// "air_pressure": [], // Pressure: mBar
-// "humidity": [], // %
-// "visibility": [], // Km round this
