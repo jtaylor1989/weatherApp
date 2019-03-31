@@ -3,26 +3,18 @@ import { StyleSheet, Text, View } from 'react-native'
 
 // Components import
 import SearchBar from './src/components/SearchBar'
+// import WeatherCity from './src/components/WeatherCity'
 
 export default class App extends React.Component {
   state = {
-    // temperature: undefined,
     cityLocation: undefined,
     city: undefined,
-    // humidity: undefined,
-    // description: undefined,
-    // error: undefined
-  }
-
-  componentDidMount = () => {
-    // this.getWeatherData()
   }
 
   // Get city name from user input
   onChangeText = (input) => {
     const city = this.cityNameFormatted(input)
     this.setState({ city: city })
-    console.log(city)
   }
 
   // Format city name for API query. Example: New York ===> new+york
@@ -56,10 +48,7 @@ export default class App extends React.Component {
           showCityWeather={this.getWeatherData}
           city={this.onChangeText}
         />
-        {/* Users can get weather data for that city */}
-        <View style={styles.container}>
-          <Text>Weather Data for your city</Text>
-        </View>
+        {/* <WeatherCity style={styles.container} /> */}
       </View>
     )
   }
